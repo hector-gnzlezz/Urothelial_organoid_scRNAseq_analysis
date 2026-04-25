@@ -1,0 +1,19 @@
+# Raw 10X data — available on GEO GSE131909
+data/raw/NMU_O_D/
+data/raw/NMU_O_P/
+
+# Large processed outputs
+data/processed/
+
+# R environment
+renv/library/
+renv/staging/
+.Rhistory
+.RData
+*.RData
+
+# Keep these tracked
+!data/raw/HK_genes_mouse.txt
+!data/README.md
+!data/processed/NMU_O_gene_sets.gmt
+!data/processed/NMU_O_integrated_markers.txt
