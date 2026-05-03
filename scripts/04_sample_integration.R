@@ -125,12 +125,12 @@ NMU_O_integrated.markers <- FindAllMarkers(
 # Export full marker table for reference
 write.table(
   NMU_O_integrated.markers,
-  "./results/NMU_O_integrated_markers.txt",
+  here("results/NMU_O_integrated_markers.txt"),
   sep = '\t'
 )
 
 # Save full R session to allow resuming analysis without re-running all scripts
-save.image(file = "./results/scRNAseq.RData")
+save.image(file = here("results/scRNAseq.RData"))
 
 
 # 7. GENE SIGNATURE EXPORT FOR ssGSEA
@@ -183,7 +183,7 @@ save_as_gmt <- function(gene_sets, file_name) {
   close(file_conn)
 }
 
-save_as_gmt(gene_sets, "./results/NMU_O_gene_sets.gmt")
+save_as_gmt(gene_sets, here("results/NMU_O_gene_sets.gmt"))
 
 
 # 8. REFERENCE MATRIX EXPORT FOR CIBERSORTx DECONVOLUTION
@@ -228,7 +228,7 @@ NMU_O_expr_matrix$human_converted <- NULL
 # Export as tab-separated matrix with row names (gene symbols)
 write.table(
   NMU_O_expr_matrix,
-  file      = "./results/NMU_O_expr_matrix.tsv",
+  file = here("results/NMU_O_expr_matrix.tsv"),
   sep       = '\t',
   col.names = NA
 )

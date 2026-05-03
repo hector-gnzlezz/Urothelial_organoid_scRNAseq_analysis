@@ -17,7 +17,7 @@ library(ggplot2)   # Visualization
 
 # Read10X loads the three files output by Cell Ranger (barcodes, features, matrix)
 # and returns a sparse count matrix (genes x cells)
-NMU_O_D.data <- Read10X(data.dir = "./data/raw/NMU_O_D/")
+NMU_O_D.data <- Read10X(data.dir = here("data/raw/NMU_O_D/"))
 
 # CreateSeuratObject wraps the count matrix into a Seurat object
 # min.cells = 3: keep only genes detected in at least 3 cells (removes noise)
@@ -47,7 +47,7 @@ NMU_O_D.data[c("Upk3a", "Krt5", "Psca"), 1:30]
 
 
 # Repeat for the proliferating condition (NMU_O_P)
-NMU_O_P.data <- Read10X(data.dir = "./data/raw/NMU_O_P/")
+NMU_O_P.data <- Read10X(data.dir = here("data/raw/NMU_O_P/"))
 NMU_O_P <- CreateSeuratObject(
   counts       = NMU_O_P.data,
   project      = "NMU_O_P",
@@ -72,7 +72,7 @@ NMU_O_P[["percent.mt"]] <- PercentageFeatureSet(NMU_O_P, pattern = "^mt-")
 # Housekeeping genes are constitutively expressed in all viable cells
 # A cell expressing very few housekeeping genes is likely of low quality
 # We use a curated mouse housekeeping gene list as an additional QC filter
-HK_genes <- read.table("./data/raw/HK_genes_mouse.txt")
+HK_genes <- read.table(here("data/raw/HK_genes_mouse.txt"))
 HK_genes  <- as.vector(HK_genes$V1)
 
 # Intersect the housekeeping list with genes present in our dataset
