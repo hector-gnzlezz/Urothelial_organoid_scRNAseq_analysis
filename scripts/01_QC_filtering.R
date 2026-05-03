@@ -4,7 +4,7 @@
 
 # Set working directory to the root of the repository
 # All paths below are relative to this root
-setwd("/Path to ROOT")
+library(here)
 
 # --- Libraries ---
 library(Seurat)    # Core scRNA-seq analysis framework
