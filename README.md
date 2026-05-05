@@ -41,8 +41,6 @@ See `data/README.md` for download instructions.
 
 ```r
 # 1. Restore R environment
-install.packages("renv")
-renv::restore()
 
 # 2. Download raw data (see data/README.md)
 
@@ -66,9 +64,8 @@ source("scripts/04_sample_integration.R")
 │   ├── 02_normalization.R
 │   ├── 03_clustering.R
 │   └── 04_sample_integration.R
-└── renv.lock                 # Reproducible R environment
+
 ```
 ## Dependencies
 
-R 4.x — managed with `renv`. Key packages: Seurat, harmony, DoubletFinder, 
 nichenetr, clustree.
