@@ -209,7 +209,7 @@ subset_cells <- unlist(lapply(idents, function(ident) {
 NMU_O_subset <- subset(NMU_O_integrated, cells = subset_cells)
 
 # Extract raw count matrix (CIBERSORTx expects counts, not normalized values)
-NMU_O_expr_matrix <- as.data.frame(GetAssayData(NMU_O_subset, slot = "counts"))
+NMU_O_expr_matrix <- as.data.frame(GetAssayData(NMU_O_subset, layer = "counts"))
 
 # Label columns with cell population names (required by CIBERSORTx format)
 colnames(NMU_O_expr_matrix) <- Idents(NMU_O_subset)

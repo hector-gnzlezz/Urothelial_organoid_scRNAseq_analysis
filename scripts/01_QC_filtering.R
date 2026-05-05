@@ -83,10 +83,10 @@ HK_genes_NMU_O_P <- HK_genes[HK_genes %in% rownames(NMU_O_P)]
 # Count how many housekeeping genes are detected (counts > 0) per cell
 # colSums across the HK gene subset gives a per-cell score
 NMU_O_D$HK_genes <- colSums(
-  GetAssayData(NMU_O_D, assay = "RNA", slot = "counts")[HK_genes_NMU_O_D, ] > 0
+  GetAssayData(NMU_O_D, assay = "RNA", layer = "counts")[HK_genes_NMU_O_D, ] > 0
 )
 NMU_O_P$HK_genes <- colSums(
-  GetAssayData(NMU_O_P, assay = "RNA", slot = "counts")[HK_genes_NMU_O_P, ] > 0
+  GetAssayData(NMU_O_P, assay = "RNA", layer = "counts")[HK_genes_NMU_O_P, ] > 0
 )
 
 
