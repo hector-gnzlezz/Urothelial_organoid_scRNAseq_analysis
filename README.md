@@ -69,6 +69,8 @@ source("scripts/04_sample_integration.R")
 │   ├── 02_normalization.R
 │   ├── 03_clustering.R
 │   └── 04_sample_integration.R
+├── env/
+│   └── session_info.txt      # R session info and package versions
 
 ```
 ## Dependencies
