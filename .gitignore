@@ -17,3 +17,4 @@ renv/staging/
 !data/README.md
 !data/processed/NMU_O_gene_sets.gmt
 !data/processed/NMU_O_integrated_markers.txt
+.Rproj.user
