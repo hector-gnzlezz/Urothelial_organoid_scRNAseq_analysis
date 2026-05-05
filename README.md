@@ -39,6 +39,11 @@ See `data/README.md` for download instructions.
 
 ## How to run
 
+> Open the project in RStudio before running the scripts:
+> **File → Open Project → Urothelial_organoid_scRNAseq_analysis.Rproj**
+> This is required for `here()` to resolve paths correctly.
+
+
 ```r
 # 1. Restore R environment
 
