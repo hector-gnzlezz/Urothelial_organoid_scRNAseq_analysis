@@ -55,7 +55,7 @@ source("scripts/04_sample_integration.R")
 
 ## Repository structure
 ├── data/
-│   ├── raw/                  # 10X matrices (not tracked, see data/README.md)
+│   ├── raw/                  # 10X matrices (tracked; also available at GEO GSE131909)
 │   │   └── HK_genes_mouse.txt
 │   └── processed/            # Pipeline outputs (not tracked)
 ├── results/
