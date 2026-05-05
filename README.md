@@ -54,6 +54,7 @@ source("scripts/04_sample_integration.R")
 ```
 
 ## Repository structure
+```
 ├── data/
 │   ├── raw/                  # 10X matrices (tracked; also available at GEO GSE131909)
 │   │   └── HK_genes_mouse.txt
@@ -66,6 +67,7 @@ source("scripts/04_sample_integration.R")
 │   ├── 03_clustering.R
 │   └── 04_sample_integration.R
 └── renv.lock                 # Reproducible R environment
+```
 ## Dependencies
 
 R 4.x — managed with `renv`. Key packages: Seurat, harmony, DoubletFinder, 
