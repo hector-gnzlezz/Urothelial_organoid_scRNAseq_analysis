@@ -57,22 +57,42 @@ source("scripts/04_sample_integration.R")
 ```
 
 ## Repository structure
+## Repository structure
 ```
-├── data/
-│   ├── raw/                  # 10X matrices (tracked; also available at GEO GSE131909)
-│   │   └── HK_genes_mouse.txt
-│   └── processed/            # Pipeline outputs (not tracked)
-├── results/
-│   └── figures/              # Generated plots
-├── scripts/
+.
+├── data
+│   ├── processed
+│   ├── raw
+│   │   ├── HK_genes_mouse.txt
+│   │   ├── NMU_O_D
+│   │   │   ├── barcodes.tsv.gz
+│   │   │   ├── features.tsv.gz
+│   │   │   └── matrix.mtx.gz
+│   │   └── NMU_O_P
+│   │       ├── barcodes.tsv.gz
+│   │       ├── features.tsv.gz
+│   │       └── matrix.mtx.gz
+│   └── README.md
+├── env
+│   └── session_info.txt
+├── LICENSE
+├── README.md
+├── results
+│   ├── figures
+│   │   ├── 01        # QC and filtering plots
+│   │   ├── 02        # Normalization and dimensionality reduction plots
+│   │   ├── 03        # Clustering and annotation plots
+│   │   ├── 04        # Integration and downstream analysis plots
+│   │   └── README.md
+│   └── README.md
+├── scripts
 │   ├── 01_QC_filtering.R
 │   ├── 02_normalization.R
 │   ├── 03_clustering.R
 │   └── 04_sample_integration.R
-├── env/
-│   └── session_info.txt      # R session info and package versions
-
+└── Urothelial_organoid_scRNAseq_analysis.Rproj
 ```
+
 ## Dependencies
 
 nichenetr, clustree.
