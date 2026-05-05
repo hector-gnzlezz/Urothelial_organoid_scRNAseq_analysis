@@ -57,7 +57,6 @@ source("scripts/04_sample_integration.R")
 ```
 
 ## Repository structure
-## Repository structure
 ```
 .
 ├── data
